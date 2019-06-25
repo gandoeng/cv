@@ -41,7 +41,7 @@
         </div>
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
-            <!-- Navbar Header--><a href="{{ url('indexAdmin') }}" class="navbar-brand">
+            <!-- Navbar Header--><a href="{{ url('forms') }}" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
               <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
             <!-- Sidebar Toggle Btn-->
@@ -113,25 +113,8 @@
         </div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
-          <li><a href="{{ url('indexAdmin') }}"> <i class="icon-home"></i>Home </a></li>
-          <li class="active"><a href="{{ url('tables') }}"> <i class="icon-grid"></i>Tables </a></li>
-          <li><a href="{{ url('charts') }}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
           <li><a href="{{ url('forms') }}"> <i class="icon-padnote"></i>Forms </a></li>
-          <!--
-          <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
-            <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ url('login') }}"> <i class="icon-logout"></i>Login page </a></li>
-        </ul><span class="heading">Extras</span>
-        <ul class="list-unstyled">
-          <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>
-          <li> <a href="#"> <i class="icon-writing-whiteboard"></i>Demo </a></li>
-          <li> <a href="#"> <i class="icon-chart"></i>Demo </a></li>
-        </ul> -->
+          <li class="active"><a href="{{ url('tables') }}"> <i class="icon-grid"></i>Tables </a></li>
       </nav>
       <!-- Sidebar Navigation end-->
       <div class="page-content">
@@ -144,7 +127,7 @@
         <!-- Breadcrumb-->
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ url('indexAdmin') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('forms') }}">Home</a></li>
             <li class="breadcrumb-item active">Tables        </li>
           </ul>
         </div>

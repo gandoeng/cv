@@ -80,7 +80,7 @@
         </div>
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
-            <!-- Navbar Header--><a href="{{ url('indexAdmin') }}" class="navbar-brand">
+            <!-- Navbar Header--><a href="{{ url('forms') }}" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
               <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
             <!-- Sidebar Toggle Btn-->
@@ -152,25 +152,8 @@
         </div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
-          <li><a href="{{ url('indexAdmin') }}"> <i class="icon-home"></i>Home </a></li>
+          <li class="active"><a href="{{ url('forms') }}"> <i class="icon-padnote"></i>Forms </a></li>
           <li><a href="{{ url('tables') }}"> <i class="icon-grid"></i>Tables </a></li>
-          <li><a href="{{ url('charts') }}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-          <li class="active"><a href="{{ url('form') }}"> <i class="icon-padnote"></i>Forms </a></li>
-          <!--
-          <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
-            <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-              <li><a href="#">Page</a></li>
-            </ul>
-          </li>
-          <li><a href="{{ url('login') }}"> <i class="icon-logout"></i>Login page </a></li>
-        </ul><span class="heading">Extras</span>
-        <ul class="list-unstyled">
-          <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>
-          <li> <a href="#"> <i class="icon-writing-whiteboard"></i>Demo </a></li>
-          <li> <a href="#"> <i class="icon-chart"></i>Demo </a></li>
-        </ul> -->
       </nav>
       <!-- Sidebar Navigation end-->
       <div class="page-content">
@@ -183,7 +166,7 @@
         <!-- Breadcrumb-->
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ url('index') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('forms') }}">Home</a></li>
             <li class="breadcrumb-item active">Forms</li>
           </ul>
         </div>
@@ -250,9 +233,22 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="submit" class="btn btn-primary" style="background-color: #DB6574; border-color: #DB6574; width: 120px; float: right;">Submit</button>
+                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
+                          <!--  modal -->
+                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                            <div role="document" class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>Data berhasil disimpan</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                    </div>
                     </form>
                   </div>
                 </div>
@@ -313,9 +309,22 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="submit" class="btn btn-primary" style="background-color: #DB6574; border-color: #DB6574; width: 120px; float: right;">Submit</button>
+                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
+                          <!--  modal -->
+                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                            <div role="document" class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>Data berhasil disimpan</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                    </div>
                     </form>
                   </div>
                 </div>
@@ -343,9 +352,22 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="submit" class="btn btn-primary" style="background-color: #DB6574; border-color: #DB6574; width: 120px; float: right;">Submit</button>
+                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
+                          <!--  modal -->
+                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                            <div role="document" class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>Data berhasil disimpan</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                    </div>
                     </form>
                   </div>
                 </div>
@@ -361,9 +383,22 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit</button>
+                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
+                          <!--  modal -->
+                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                            <div role="document" class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>Data berhasil disimpan</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                    </div>
                     </form>
                   </div>
                 </div>
@@ -376,29 +411,96 @@
                     <form class="form-horizontal">
                       <div class="form-group row">
                         <div class="col-sm-12">
-                          <textarea name="isi" id="isi" rows="22"></textarea>                        
+                          <textarea name="isiBerita" id="isi" rows="22"></textarea>                        
                         </div>
                       </div>
                       <div class="line"></div>
                       <div class="form-group row">
-                        <label class="col-sm-3 form-control-label"><h5>JUDUL</h5></label>
+                        <label class="col-sm-3 form-control-label"><h5>Judul</h5></label>
                         <div class="col-sm-9">
                           <input type="text" class="form-control" required>
                         </div>
                       </div>
                       <div class="line"></div>
                       <div class="form-group row">
-                        <label class="col-sm-3 form-control-label"><h5>GAMBAR</h5></label>
+                        <label class="col-sm-3 form-control-label"><h5>Gambar</h5></label>
                         <div class="form-group files color col-sm-9">
                           <input type="file" class="form-control" accept="image/*" style="border: none;">
                         </div>
                       </div>
-                      <div></div>
+                      <div class="line"></div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="submit" class="btn btn-primary" style="background-color: #DB6574; border-color: #DB6574; width: 120px; float: right;">Submit</button>
+                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
+                          <!--  modal -->
+                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                            <div role="document" class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>Data berhasil disimpan</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Portofolio -->
+              <div class="col-lg-12">
+                <div class="block">
+                  <div class="title"><strong>Portfolio</strong></div>
+                  <div class="block-body">
+                    <form class="form-horizontal">
+                      <div class="form-group row">
+                        <div class="col-sm-12">
+                          <textarea name="isiPortfolio" rows="22"></textarea>
+                        </div>
+                      </div>
+                      <div class="line"></div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label"><h5>Nama Projek</h5></label>
+                        <div class="form-group files color col-sm-9">
+                          <input type="text" name="namaProjek" class="form-control">
+                        </div>
+                      </div>
+                      <div class="line"></div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label"><h5>Jenis Projek</h5></label>
+                        <div class="form-group files color col-sm-9">
+                          <input type="text" name="jenisProjek" class="form-control">
+                        </div>
+                      </div>
+                      <div class="line"></div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label"><h5>Gambar</h5></label>
+                        <div class="form-group files color col-sm-9">
+                          <input type="file" class="form-control" accept="image/*" style="border: none;">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-sm-9 ml-auto">
+                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
+                          <!--  modal -->
+                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                            <div role="document" class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                              </div>
+                              <div class="modal-body">
+                                <p>Data berhasil disimpan</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     </form>
                   </div>
                 </div>
