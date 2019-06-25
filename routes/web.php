@@ -47,3 +47,30 @@ Route::get('/services', function(){
 Route::get('/portfolioSingle', function(){
 	return view('portfolioSingle');
 });
+
+
+//admin
+
+Route::get('/charts', function(){
+	return view('admin/charts');
+});
+
+Route::get('/forms', function(){
+	return view('admin/forms');
+});
+
+Route::get('/login', function(){
+	return view('admin/login');
+});
+
+Route::get('/indexAdmin', function(){
+	return view('admin/index');
+});
+
+Route::get('/register', function(){
+	return view('admin/register');
+});
+
+Route::get('tables', function(){
+	return view('admin/tables');
+});
