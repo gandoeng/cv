@@ -47,54 +47,7 @@
             <!-- Sidebar Toggle Btn-->
             <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
           </div>
-          <div class="right-menu list-inline no-margin-bottom">    
-            <div class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></div>
-            <div class="list-inline-item dropdown"><a id="navbarDropdownMenuLink1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link messages-toggle"><i class="icon-email"></i><span class="badge dashbg-1">5</span></a>
-              <div aria-labelledby="navbarDropdownMenuLink1" class="dropdown-menu messages"><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="{{ url('admin/img/avatar-3.jpg') }}" alt="..." class="img-fluid">
-                    <div class="status online"></div>
-                  </div>
-                  <div class="content">   <strong class="d-block">Nadia Halsey</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">9:30am</small></div></a><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="{{ url('admin/img/avatar-2.jpg') }}" alt="..." class="img-fluid">
-                    <div class="status away"></div>
-                  </div>
-                  <div class="content">   <strong class="d-block">Peter Ramsy</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">7:40am</small></div></a><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="{{ url('admin/img/avatar-1.jpg') }}" alt="..." class="img-fluid">
-                    <div class="status busy"></div>
-                  </div>
-                  <div class="content">   <strong class="d-block">Sam Kaheil</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">6:55am</small></div></a><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="{{ url('admin/img/avatar-5.jpg') }}" alt="..." class="img-fluid">
-                    <div class="status offline"></div>
-                  </div>
-                  <div class="content">   <strong class="d-block">Sara Wood</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">10:30pm</small></div></a><a href="#" class="dropdown-item text-center message"> <strong>See All Messages <i class="fa fa-angle-right"></i></strong></a></div>
-            </div>
-            <!-- Tasks-->
-            <div class="list-inline-item dropdown"><a id="navbarDropdownMenuLink2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link tasks-toggle"><i class="icon-new-file"></i><span class="badge dashbg-3">9</span></a>
-              <div aria-labelledby="navbarDropdownMenuLink2" class="dropdown-menu tasks-list"><a href="#" class="dropdown-item">
-                  <div class="text d-flex justify-content-between"><strong>Task 1</strong><span>40% complete</span></div>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-1"></div>
-                  </div></a><a href="#" class="dropdown-item">
-                  <div class="text d-flex justify-content-between"><strong>Task 2</strong><span>20% complete</span></div>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-3"></div>
-                  </div></a><a href="#" class="dropdown-item">
-                  <div class="text d-flex justify-content-between"><strong>Task 3</strong><span>70% complete</span></div>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-2"></div>
-                  </div></a><a href="#" class="dropdown-item">
-                  <div class="text d-flex justify-content-between"><strong>Task 4</strong><span>30% complete</span></div>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-4"></div>
-                  </div></a><a href="#" class="dropdown-item">
-                  <div class="text d-flex justify-content-between"><strong>Task 5</strong><span>65% complete</span></div>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-1"></div>
-                  </div></a><a href="#" class="dropdown-item text-center"> <strong>See All Tasks <i class="fa fa-angle-right"></i></strong></a>
-              </div>
-            </div>
-            <!-- Tasks end-->
-            <!-- Log out -->
+          <!-- Log out -->
             <div class="list-inline-item logout"><a id="logout" href="{{ url('login') }}" class="nav-link"> <span class="d-none d-sm-inline">Logout </span><i class="icon-logout"></i></a></div>
           </div>
         </div>
@@ -134,166 +87,225 @@
         <section class="no-padding-top">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="block margin-bottom-sm">
-                  <div class="title"><strong>Basic Table</strong></div>
-                  <div class="table-responsive"> 
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="block margin-bottom-sm">
-                  <div class="title"><strong>Striped Table</strong></div>
-                  <div class="table-responsive"> 
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter  </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
+            <!-- tabel education -->
+              <div class="col-lg-12">
                 <div class="block">
-                  <div class="title"><strong>Striped table with hover effect</strong></div>
+                  <div class="title"><strong>Education</strong></div>
                   <div class="table-responsive"> 
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
+                          <th>Nama sekolah</th>
+                          <th>Tahun masuk</th>
+                          <th>Tahun keluar</th>
+                          <th>Kota/Kabupaten</th>
+                          <th>Negara</th>
+                          <th>Tindakan</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
+                          <td>SDN 1 Kelapa Dua Kab. Tangerang</td>
+                          <td>2007</td>
+                          <td>2012</td>
+                          <td>Tangerang</td>
+                          <td>Indonesia</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <th scope="row">1</th>
+                          <td>SDN 1 Kelapa Dua Kab. Tangerang</td>
+                          <td>2007</td>
+                          <td>2012</td>
+                          <td>Tangerang</td>
+                          <td>Indonesia</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter       </td>
+                          <th scope="row">1</th>
+                          <td>SDN 1 Kelapa Dua Kab. Tangerang</td>
+                          <td>2007</td>
+                          <td>2012</td>
+                          <td>Tangerang</td>
+                          <td>Indonesia</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
+              <!-- end table -->
+              <!-- tabel Experience -->
+              <div class="col-lg-12">
                 <div class="block">
-                  <div class="title"><strong>Compact Table</strong></div>
+                  <div class="title"><strong>Experience</strong></div>
                   <div class="table-responsive"> 
-                    <table class="table table-striped table-sm">
+                    <table class="table table-striped table-hover">
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
+                          <th >Nama kantor</th>
+                          <th>Jenis pekerjaan</th>
+                          <th>Tahun masuk</th>
+                          <th>Tahun keluar</th>
+                          <th>Kota/Kabupaten</th>
+                          <th>Negara</th>
+                          <th>Tindakan</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter      </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
+                          <td>PT GMF Aero Asia</td>
+                          <td>Project Management</td>
+                          <td>2019</td>
+                          <td>present</td>
+                          <td>Tangerang</td>
+                          <td>Indonesia</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
+              <!-- end table -->
+              <!-- tabel education -->
+              <div class="col-lg-12">
+                <div class="block">
+                  <div class="title"><strong>Skill</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Keahlian</th>
+                          <th>Prensetase (%)</th>
+                          <th>Tindakan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Tidur</td>
+                          <td>100</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
+                        </tr> 
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Makan</td>
+                          <td>100</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
+                        </tr> 
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Belajar</td>
+                          <td>6</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
+                        </tr>    
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- end table -->
+              <!-- tabel berita -->
+              <div class="col-lg-12">
+                <div class="block">
+                  <div class="title"><strong>Berita</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Judul</th>
+                          <th>Isi</th>
+                          <th>Gambar</th>
+                          <th>Tindakan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Haleluya</td>
+                          <td>
+                            <p>
+                              Gandung ganteng sangat pokoknya.
+                            </p>
+                            <p>
+                              Kamu semua jeleks.
+                            </p>
+                          </td>
+                          <td>hal.jpg</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- end table -->
+              <!-- tabel portfolio -->
+              <div class="col-lg-12">
+                <div class="block">
+                  <div class="title"><strong>Portfolio</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Nama projek</th>
+                          <th>Jenis projek</th>
+                          <th>Client</th>
+                          <th>Isi</th>
+                          <th>Gambar</th>
+                          <th>Tindakan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Haleluya</td>
+                          <td>Website</td>
+                          <td>Juminten</td>
+                          <td>
+                            <p>
+                              Gandung ganteng sangat pokoknya.
+                            </p>
+                            <p>
+                              Kamu semua jeleks.
+                            </p>
+                          </td>
+                          <td>hal.jpg</td>
+                          <td>
+                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                          </td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- end table -->
             </div>
           </div>
         </section>

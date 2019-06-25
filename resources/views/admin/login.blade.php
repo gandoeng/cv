@@ -35,9 +35,9 @@
               <div class="info d-flex align-items-center">
                 <div class="content">
                   <div class="logo">
-                    <h1>Dashboard</h1>
+                    <h2>Albert Einstein</h2>
                   </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>"Hanya ada dua cara menjalani kehidupan kita. Pertama adalah seolah tidak ada keajaiban. Kedua adalah seolah segala sesuatu adalah keajaiban."</p>
                 </div>
               </div>
             </div>
@@ -55,7 +55,7 @@
                       <label for="login-password" class="label-material">Password</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Login</button>
-                  </form><a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="{{ url('register') }}" class="signup">Signup</a>
+                  </form>
                 </div>
               </div>
             </div>
