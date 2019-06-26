@@ -63,6 +63,7 @@
     </script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
   </head>
   <body>
     <header class="header">   
@@ -131,21 +132,22 @@
                 <div class="block">
                   <div class="title"><strong class="d-block">Experiance</strong></div>
                   <div class="block-body">
-                    <form>
+                    <form method="POST" action="{{ url('forms/pengalaman') }}">
+                      {{ csrf_field() }}
                       <div class="form-group">       
                         <label class="form-control-label">Nama Kantor</label>
-                        <input type="text" class="form-control" name="kantor">
+                        <input type="text" class="form-control" name="kantor" required>
                       </div>
                       <div class="form-group">
                         <label class="form-control-label">Jenis Pekerjaan</label>
-                        <input type="text" class="form-control" name="pekerjaan">
+                        <input type="text" class="form-control" name="pekerjaan" required>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-9">
                           <div class="row">
                             <div class="col-md-6">
                               <label class="form-control-label">Tahun masuk</label>
-                              <select name="tahun" class="form-control mb-3 mb-3">
+                              <select name="tahunMasuk" class="form-control mb-3 mb-3" required>
                                 <option value="0">Please Select</option>
                                 <option value="present">Present</option>
                                 <?php
@@ -160,9 +162,9 @@
                             </div>
                             <div class="col-md-6">
                               <label class="form-control-label">Tahun keluar</label>
-                              <select name="tahun" class="form-control mb-3 mb-3">
-                                <option value="0">Please Select</option>
-                                <option value="present">Present</option>
+                              <select name="tahunKeluar" class="form-control mb-3 mb-3" required>
+                                <option value="0000">Please Select</option>
+                                <option value="1111">Present</option>
                                 <?php
                                   $thn_skr = date('Y');
                                   for ($x = $thn_skr; $x >= 2000; $x--) {
@@ -178,30 +180,17 @@
                       </div>
                       <div class="form-group">
                         <label class="form-control-label">Kota/Kabupaten</label>
-                        <input type="text" class="form-control" name="kota">
+                        <input type="text" class="form-control" name="kota" required>
                       </div>
                       <div class="form-group">
                         <label class="form-control-label">Negara</label>
-                        <input type="text" class="form-control" name="negara">
+                        <input type="text" class="form-control" name="negara" required>
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
-                          <!--  modal -->
-                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                            <div role="document" class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Data berhasil disimpan</p>
-                              </div>
-                            </div>
-                          </div>
+                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
                         </div>
                       </div>
-                    </div>
                     </form>
                   </div>
                 </div>
@@ -211,19 +200,20 @@
                 <div class="block">
                   <div class="title"><strong class="d-block">Education</strong></div>
                   <div class="block-body">
-                    <form>
+                    <form method="post" action="{{ url('forms/edukasi') }}" >
+                      {{ csrf_field() }}
                       <div class="form-group">
                         <label class="form-control-label">Nama sekolah</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="sekolah" required>
                       </div>
                       <div class="form-group">
                         <div class="col-sm-9">
                           <div class="row">
                             <div class="col-md-6">
                               <label class="form-control-label">Tahun masuk</label>
-                              <select name="tahun" class="form-control mb-3 mb-3">
-                                <option value="0">Please Select</option>
-                                <option value="present">Present</option>
+                              <select name="tahunMasuk" class="form-control mb-3 mb-3" required>
+                                <option value="0000">Please Select</option>
+                                <option value="1111">Present</option>
                                 <?php
                                   $thn_skr = date('Y');
                                   for ($x = $thn_skr; $x >= 2000; $x--) {
@@ -236,9 +226,9 @@
                             </div>
                             <div class="col-md-6">
                               <label class="form-control-label">Tahun keluar</label>
-                              <select name="tahun" class="form-control mb-3 mb-3">
-                                <option value="0">Please Select</option>
-                                <option value="present">Present</option>
+                              <select name="tahunKeluar" class="form-control mb-3 mb-3" required>
+                                <option value="0000">Please Select</option>
+                                <option value="1111">Present</option>
                                 <?php
                                   $thn_skr = date('Y');
                                   for ($x = $thn_skr; $x >= 2000; $x--) {
@@ -254,30 +244,17 @@
                       </div>
                       <div class="form-group">       
                         <label class="form-control-label">Kota/Kabupaten</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="kota" required>
                       </div>
                       <div class="form-group">       
                         <label class="form-control-label">Negara</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="negara" required>
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
-                          <!--  modal -->
-                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                            <div role="document" class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Data berhasil disimpan</p>
-                              </div>
-                            </div>
-                          </div>
+                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
                         </div>
                       </div>
-                    </div>
                     </form>
                   </div>
                 </div>
@@ -287,10 +264,11 @@
                 <div class="block">
                   <div class="title"><strong>Skill</strong></div>
                   <div class="block-body">
-                    <form>
+                    <form method="POST" action="{{ url('forms/skill') }} ">
+                      {{ csrf_field() }}
                       <div class="form-group">
                         <label class="form-control-label">Keahlian</label>
-                        <input type="text" name="Keahlian" class="form-control">
+                        <input type="text" name="keahlian" class="form-control">
                       </div>
                       <div class="form-group">
                         <label class="form-control-label">Persentase (%)</label>
@@ -305,20 +283,7 @@
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
-                          <!--  modal -->
-                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                            <div role="document" class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Data berhasil disimpan</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
                       </div>
                     </div>
                     </form>
@@ -330,26 +295,14 @@
                 <div class="block">
                   <div class="title"><strong>Upload CV</strong></div>
                   <div class="block-body">
-                    <form>
+                    <form method="POST" action="forms/cv" enctype="multipart/form-data">
+                      {{ csrf_field() }}
                       <div class="form-group row">
-                        <input type="file" name="cv" class="form-control" accept="application/pdf" style="border: none;">
+                        <input type="file" name="file_cv" class="form-control" accept="application/pdf" id="file_cv" style="border: none;">
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
-                          <!--  modal -->
-                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                            <div role="document" class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Data berhasil disimpan</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
                       </div>
                     </div>
                     </form>
@@ -361,43 +314,32 @@
                 <div class="block">
                   <div class="title"><strong>Berita</strong></div>
                   <div class="block-body">
-                    <form class="form-horizontal">
+                    <form method="POST" action="{{ url('forms/berita') }}" enctype="multipart/form-data">
+                      {{ csrf_field() }}
                       <div class="form-group row">
                         <div class="col-sm-12">
-                          <textarea name="isiBerita" id="isi" rows="22"></textarea>                        
+                          <textarea name="isiBerita" id="isiBerita" rows="22"></textarea>
                         </div>
                       </div>
                       <div class="line"></div>
                       <div class="form-group row">
                         <label class="col-sm-3 form-control-label"><h5>Judul</h5></label>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control" required>
+                          <input type="text" class="form-control" name="judul" required>
                         </div>
                       </div>
                       <div class="line"></div>
                       <div class="form-group row">
                         <label class="col-sm-3 form-control-label"><h5>Gambar</h5></label>
                         <div class="form-group files color col-sm-9">
-                          <input type="file" class="form-control" accept="image/*" style="border: none;">
+                          <input type="file" name="file_gambar" id="file_gambar" class="form-control"
+                         accept="image/*" style="border: none;">
                         </div>
                       </div>
                       <div class="line"></div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
-                          <!--  modal -->
-                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                            <div role="document" class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Data berhasil disimpan</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
                       </div>
                     </div>
                     </form>
@@ -409,7 +351,8 @@
                 <div class="block">
                   <div class="title"><strong>Portfolio</strong></div>
                   <div class="block-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" enctype="multipart/form-data" method="post" action="forms/portfolio">
+                      {{ csrf_field() }}
                       <div class="form-group row">
                         <div class="col-sm-12">
                           <textarea name="isiPortfolio" rows="22"></textarea>
@@ -432,32 +375,19 @@
                       <div class="form-group row">
                         <label class="col-sm-3 form-control-label"><h5>Client</h5></label>
                         <div class="form-group files color col-sm-9">
-                          <input type="text" name="jenisProjek" class="form-control">
+                          <input type="text" name="client" class="form-control">
                         </div>
                       </div>
                       <div class="line"></div>
                       <div class="form-group row">
                         <label class="col-sm-3 form-control-label"><h5>Gambar</h5></label>
                         <div class="form-group files color col-sm-9">
-                          <input type="file" class="form-control" accept="image/*" style="border: none;">
+                          <input type="file" class="form-control" name="file_gambar" accept="image/*" style="border: none;">
                         </div>
                       </div>
                       <div class="form-group row">
                         <div class="col-sm-9 ml-auto">
-                          <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
-                          <!--  modal -->
-                          <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
-                            <div role="document" class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Status</strong>
-                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                              </div>
-                              <div class="modal-body">
-                                <p>Data berhasil disimpan</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                          <button type="submit" class="btn btn-primary" style="width: 120px; float: right;">Submit </button>
                       </div>
                     </div>
                     </form>
@@ -479,9 +409,9 @@
     </div>
     <!-- JavaScript files-->
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('admin/vendor/popper.js/umd/popper.min.js') }}"> </script>
+    <script src="{{ asset('admin/vendor/popper.js/umd/popper.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin/vendor/jquery.cookie/jquery.cookie.js') }}"> </script>
+    <script src="{{ asset('admin/vendor/jquery.cookie/jquery.cookie.js') }}"></script>
     <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/jquery-validation/jquery.validate.min.js') }}"></script>
     <script src="{{ asset('admin/js/front.js') }}"></script>
@@ -490,5 +420,7 @@
           document.getElementById('textInput').value=val; 
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    @include('sweet::alert')
   </body>
 </html>

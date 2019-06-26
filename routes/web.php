@@ -51,26 +51,37 @@ Route::get('/portfolioSingle', function(){
 
 //admin
 
-Route::get('/charts', function(){
+/*Route::get('/charts', function(){
 	return view('admin/charts');
-});
+});*/
 
-Route::get('/forms', function(){
-	return view('admin/forms');
-});
 
-Route::get('/login', function(){
-	return view('admin/login');
-});
+//halaman form
+Route::get('/forms','Controller@forms');
+Route::post('/forms/edukasi', 'Controller@edukasiInput');
+Route::post('/forms/pengalaman', 'Controller@pengalamanInput');
+Route::post('/forms/skill', 'Controller@skillInput');
+Route::post('/forms/cv','Controller@uploadCV');
+Route::post('/forms/berita','Controller@beritaInput');
+Route::post('/forms/portfolio','Controller@portfolioInput');
 
-Route::get('/indexAdmin', function(){
+Route::get('/hapusEdukasi/{id}', 'Controller@hapusEdukasi');
+Route::get('/hapusPengalaman/{id}', 'Controller@hapusPengalaman');
+Route::get('/hapusSkill/{id}', 'Controller@hapusSkill');
+Route::get('/hapusCV/{id}', 'Controller@hapusCV');
+Route::get('/hapusBerita/{id}', 'Controller@hapusBerita');
+Route::get('/hapusPortfolio/{id}', 'Controller@hapusPortfolio');
+
+//halaman login
+Route::get('/login', 'Controller@login');
+Route::get('/login/proses', 'Controller@proses');
+
+/*Route::get('/indexAdmin', function(){
 	return view('admin/index');
-});
+});*/
 
-Route::get('/register', function(){
+/*Route::get('/register', function(){
 	return view('admin/register');
-});
+});*/
 
-Route::get('tables', function(){
-	return view('admin/tables');
-});
+Route::get('tables', 'Controller@tablesTampil');

@@ -95,7 +95,6 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>#</th>
                           <th>Nama sekolah</th>
                           <th>Tahun masuk</th>
                           <th>Tahun keluar</th>
@@ -105,38 +104,17 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($edukasi as $e)
                         <tr>
-                          <th scope="row">1</th>
-                          <td>SDN 1 Kelapa Dua Kab. Tangerang</td>
-                          <td>2007</td>
-                          <td>2012</td>
-                          <td>Tangerang</td>
-                          <td>Indonesia</td>
+                          <td>{{ $e->sekolah }}</td>
+                          <td>{{ $e->tahun_masuk }}</td>
+                          <td>{{ $e->tahun_keluar }}</td>
+                          <td>{{ $e->kota }}</td>
+                          <td>{{ $e->negara }}</td>
                           <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                            <a class="btn btn-primary" style="width: 80px; float: left; background-color: #DB6574; color: #fff" href="{{ url('hapusEdukasi') }}/{{ $e->id }} ">Hapus</a>
                           </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>SDN 1 Kelapa Dua Kab. Tangerang</td>
-                          <td>2007</td>
-                          <td>2012</td>
-                          <td>Tangerang</td>
-                          <td>Indonesia</td>
-                          <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>SDN 1 Kelapa Dua Kab. Tangerang</td>
-                          <td>2007</td>
-                          <td>2012</td>
-                          <td>Tangerang</td>
-                          <td>Indonesia</td>
-                          <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
-                          </td>
+                          @endforeach
                         </tr>
                       </tbody>
                     </table>
@@ -152,8 +130,7 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>#</th>
-                          <th >Nama kantor</th>
+                          <th>Nama kantor</th>
                           <th>Jenis pekerjaan</th>
                           <th>Tahun masuk</th>
                           <th>Tahun keluar</th>
@@ -163,18 +140,19 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($pengalaman as $p)
                         <tr>
-                          <th scope="row">1</th>
-                          <td>PT GMF Aero Asia</td>
-                          <td>Project Management</td>
-                          <td>2019</td>
-                          <td>present</td>
-                          <td>Tangerang</td>
-                          <td>Indonesia</td>
+                          <td>{{ $p->kantor }}</td>
+                          <td>{{ $p->jenis }}</td>
+                          <td>{{ $p->tahun_masuk }}</td>
+                          <td>{{ $p->tahun_keluar }}</td>
+                          <td>{{ $p->kota }}</td>
+                          <td>{{ $p->negara }}</td>
                           <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                            <a class="btn btn-primary" style="width: 80px; float: left; background-color: #DB6574; color: #fff" href="{{ url('hapusPengalaman') }}/{{ $p->id }} ">Hapus</a>                          
                           </td>
                         </tr>
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
@@ -189,37 +167,48 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>#</th>
                           <th>Keahlian</th>
                           <th>Prensetase (%)</th>
                           <th>Tindakan</th>
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($skill as $s)
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Tidur</td>
-                          <td>100</td>
+                          <td>{{ $s->keahlian }}</td>
+                          <td>{{ $s->persentase }}</td>
                           <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                            <a class="btn btn-primary" style="width: 80px; float: left; background-color: #DB6574; color: #fff" href="{{ url('hapusSkill') }}/{{ $s->id }} ">Hapus</a>
                           </td>
-                        </tr> 
+                          @endforeach
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- end table -->
+               <!-- tabel education -->
+              <div class="col-lg-12">
+                <div class="block">
+                  <div class="title"><strong>CV</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table table-striped table-hover">
+                      <thead>
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Makan</td>
-                          <td>100</td>
-                          <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
-                          </td>
-                        </tr> 
+                          <th>Nama</th>
+                          <th>Tindakan</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @foreach($cv as $c)
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Belajar</td>
-                          <td>6</td>
+                          <td>{{ $c->nama }}</td>
                           <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
+                            <a class="btn btn-primary" style="width: 80px; float: left; background-color: #DB6574; color: #fff" href="{{ url('hapusCV') }}/{{ $c->id }} ">Hapus</a>
                           </td>
-                        </tr>    
+                          @endforeach
+                        </tr>
                       </tbody>
                     </table>
                   </div>
@@ -234,7 +223,6 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>#</th>
                           <th>Judul</th>
                           <th>Isi</th>
                           <th>Gambar</th>
@@ -242,22 +230,16 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($berita as $b)
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Haleluya</td>
+                          <td>{{ $b->judul }}</td>
+                          <td><?=str_replace('"','',$b->isi)?></td>
+                          <td>{{ $b->gambar }}</td>
                           <td>
-                            <p>
-                              Gandung ganteng sangat pokoknya.
-                            </p>
-                            <p>
-                              Kamu semua jeleks.
-                            </p>
+                            <a class="btn btn-primary" style="width: 80px; float: left; background-color: #DB6574; color: #fff" href="{{ url('hapusBerita') }}/{{ $b->id }} ">Hapus</a>
                           </td>
-                          <td>hal.jpg</td>
-                          <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
-                          </td>
-                        </tr>   
+                        </tr>
+                        @endforeach   
                       </tbody>
                     </table>
                   </div>
@@ -272,7 +254,6 @@
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>#</th>
                           <th>Nama projek</th>
                           <th>Jenis projek</th>
                           <th>Client</th>
@@ -282,24 +263,17 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($portfolio as $p)
                         <tr>
-                          <th scope="row">1</th>
-                          <td>Haleluya</td>
-                          <td>Website</td>
-                          <td>Juminten</td>
+                          <td>{{ $p->nama }}</td>
+                          <td>{{ $p->jenis }}</td>
+                          <td>{{ $p->client }}</td>
+                          <td><?=str_replace('"','',$p->isi)?></td>
+                          <td>{{ $p->gambar }}</td>
                           <td>
-                            <p>
-                              Gandung ganteng sangat pokoknya.
-                            </p>
-                            <p>
-                              Kamu semua jeleks.
-                            </p>
-                          </td>
-                          <td>hal.jpg</td>
-                          <td>
-                            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary" style="width: 80px; float: left;">Hapus</button>
-                          </td>
+                            <a class="btn btn-primary" style="width: 80px; float: left; background-color: #DB6574; color: #fff" href="{{ url('hapusPortfolio') }}/{{ $p->id }} ">Hapus</a>                          </td>
                         </tr>   
+                        @endforeach
                       </tbody>
                     </table>
                   </div>
